@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- 攻击力说明
+    攻击力表示了英雄在普通攻击（Q）时造成的未计算防御力的伤害（对中立生物也相同），同时也会影
+响英雄的技能伤害。在游戏中每位英雄有基础攻击力，而武器或技能中的攻击力则是在基础上的直接相加，
+如基础攻击力为60，而武器攻击力为40，那么最终的攻击力就是(40+60)。
+-->
+<!-- 攻击速度说明
+    攻击速度表示了在一秒内，生物普通攻击的次数。在游戏中每位英雄有基础攻击速度，而武器或技能汇
+总的攻击速度仅是在基础攻击速度上的百分比提升。如基础攻击速度为0.8，武器或技能提供的攻击速度为40，
+那么则最终的攻击速度为0.8*(1+40%)。若是有多个提升效果，则叠加，即为0.8*(1+x%+y%+z%+...)。若是
+减少攻击速度，则是以负数的形式加入到上式中。
+-->
+<!-- 移动速度说明
+    移动速度表示了玩家在地图中一秒钟移动的像素数量。在游戏中每位英雄有基础移动速度，而武器或技
+汇总的移动速度仅是在基础移动速度上的百分比提升。如基础移动速度为350，武器或技能提供的移动速度为40，
+那么则最终的移动速度为350*(1+40%)。若是有多个提升效果，则叠加，即为350*(1+x%+y%+z%+...)。若是
+减少攻击速度，则是以负数的形式加入到上式中。
+-->
+<Weapon>
+    <Weapon no="1">
+        <type>low</type>
+        <name>攻击之戒</name>
+        <effect>无</effect>
+        <attribute>
+            <attack>10</attack>
+            <attackSpeed>0</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+    </Weapon>
+    <Weapon no="2">
+        <type>low</type>
+        <name>攻速之戒</name>
+        <effect>无</effect>
+        <attribute>
+            <attack>0</attack>
+            <attackSpeed>10</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+    </Weapon>
+    <Weapon no="3">
+        <type>low</type>
+        <name>移速之戒</name>
+        <effect>无</effect>
+        <attribute>
+            <attack>0</attack>
+            <attackSpeed>0</attackSpeed>
+            <moveSpeed>10</moveSpeed>
+        </attribute>
+    </Weapon>
+</Weapon>
+
+
+

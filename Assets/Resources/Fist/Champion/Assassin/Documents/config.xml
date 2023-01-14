@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Assassin>
+    <BasicAttribute>
+        <Life>600</Life>
+        <Attack>60</Attack>
+        <MoveSpeed>4</MoveSpeed>
+        <AttackSpeed>1.5</AttackSpeed>
+        <AttackRange>1.5</AttackRange>
+        <Defense>10</Defense>
+    </BasicAttribute>
+    <Skill>
+        <W>
+            <Cold>10</Cold>
+            <Radius>6</Radius>
+            <Speed>12</Speed>
+            <Damage>40</Damage>
+            <DamageRatio>0.8</DamageRatio>
+            <StunDuration>1</StunDuration>
+        </W>
+        <E>
+            <Cold>10</Cold>
+            <Radius>6</Radius>
+            <Speed>12</Speed>
+            <Damage>40</Damage>
+            <DamageRatio>0.4</DamageRatio>
+        </E>
+        <R>
+            <Cold>40</Cold>
+            <Duration>3</Duration>
+            <Damage>30</Damage>
+            <DamageRatio>0.1</DamageRatio>
+            <AttackRate>0.5</AttackRate>
+            <DecreaseSpeedRatio>0.4</DecreaseSpeedRatio>
+            <DecreaseSpeedDuration>0.5</DecreaseSpeedDuration>
+            <TransportRadius>10</TransportRadius>
+        </R>
+    </Skill>
+</Assassin>
+
+
+

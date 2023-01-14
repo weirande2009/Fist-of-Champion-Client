@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- 护甲说明
+    在游戏中每位英雄有基础护甲，而其他的护甲均是在基础护甲上的百分比提升
+如低级防具是10点护甲，而英雄基础护甲为30，那么则是将护甲提升到30*(1+10%)
+若是有多个护甲提升的Buff，则是相加，即为30*(1+x%+y%+z%...)。若是Debuff，
+则也是直接以负数的形式加入上式中。
+    上述的计算结果即为在受到伤害时的减伤百分比，若最终护甲为45，则减少45%
+的伤害。
+-->
+<Armor>
+    <Armor no="1">
+        <type>low</type>
+        <attribute>
+            <defense>10</defense>
+        </attribute>
+    </Armor>
+    <Armor no="2">
+        <type>middle</type>
+        <attribute>
+            <defense>30</defense>
+        </attribute>
+    </Armor>
+    <Armor no="3">
+        <type>high</type>
+        <attribute>
+            <defense>50</defense>
+        </attribute>
+    </Armor>
+</Armor>
+
+
+

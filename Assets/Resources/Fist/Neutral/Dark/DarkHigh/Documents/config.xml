@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<SoilLow>
+    <BasicAttribute>
+        <Life>400</Life>
+        <Attack>60</Attack>
+        <MoveSpeed>3.5</MoveSpeed>
+        <AttackSpeed>4</AttackSpeed>
+        <AttackRange>6</AttackRange>
+        <Defense>20</Defense>
+    </BasicAttribute>
+    <OtherAttribute>
+        <AttackMoveSpeed>1</AttackMoveSpeed>
+    </OtherAttribute>
+    <Drop>
+        <Probability>1</Probability>
+        <Item>
+            <Weapon>
+                <Type>Middle</Type>
+                <No>0</No>
+            </Weapon>
+            <Weapon>
+                <Type>Middle</Type>
+                <No>1</No>
+            </Weapon>
+            <Weapon>
+                <Type>Middle</Type>
+                <No>2</No>
+            </Weapon>
+            <Weapon>
+                <Type>Middle</Type>
+                <No>3</No>
+            </Weapon>
+            <Weapon>
+                <Type>Middle</Type>
+                <No>4</No>
+            </Weapon>
+            <Armor>
+                <No>2</No>
+            </Armor>
+        </Item>
+    </Drop>
+    <Intellegence>
+        <WatchRadius>6</WatchRadius>
+    </Intellegence>
+</SoilLow>
+
+
+

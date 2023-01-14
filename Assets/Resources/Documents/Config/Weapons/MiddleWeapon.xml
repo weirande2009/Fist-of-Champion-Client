@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Weapon>
+    <Weapon no="1">
+        <!-- 合成：攻击之戒+攻速之戒 -->
+        <!-- 特效：普通攻击造成伤害后增加自身20攻击速度，持续2秒 -->
+        <type>middle</type>
+        <name>精灵之弓</name>
+        <effect>普通攻击造成伤害后增加自身20攻击速度, 持续2秒</effect>
+        <attribute>
+            <attack>30</attack>
+            <attackSpeed>15</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>low</type>
+                <no>1</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>2</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="2">
+        <!-- 合成：攻击之戒+攻速之戒 -->
+        <!-- 特效：普通攻击造成伤害后对目标造成15减速，持续1秒 -->
+        <type>middle</type>
+        <name>堕落之剑</name>
+        <effect>普通攻击造成伤害后对目标造成15减速, 持续1秒</effect>
+        <attribute>
+            <attack>30</attack>
+            <attackSpeed>15</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>low</type>
+                <no>1</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>2</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="3">
+        <!-- 合成：攻击之戒+攻击之戒 -->
+        <type>middle</type>
+        <name>冲锋枪</name>
+        <effect>无</effect>
+        <attribute>
+            <attack>80</attack>
+            <attackSpeed>0</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>low</type>
+                <no>1</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>1</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="4">
+        <!-- 合成：攻击之戒+移速之戒 -->
+        <!-- 特效：普通攻击造成伤害后对自身造成30减速，持续2秒 -->
+        <type>middle</type>
+        <name>重锤</name>
+        <effect>普通攻击造成伤害后对自身造成30减速, 持续2秒</effect>
+        <attribute>
+            <attack>80</attack>
+            <attackSpeed>0</attackSpeed>
+            <moveSpeed>20</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>low</type>
+                <no>1</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>3</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="5">
+        <!-- 合成：攻速之戒+移速之戒 -->
+        <!-- 特效：造成伤害后对自身造成15加速，持续2秒 -->
+        <type>middle</type>
+        <name>回力标</name>
+        <effect>造成伤害后对自身造成15加速, 持续2秒</effect>
+        <attribute>
+            <attack>0</attack>
+            <attackSpeed>15</attackSpeed>
+            <moveSpeed>15</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>low</type>
+                <no>2</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>3</no>
+            </item>
+        </combine>
+    </Weapon>
+</Weapon>
+
+
+

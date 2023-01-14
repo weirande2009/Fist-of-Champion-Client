@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Weapon>
+    <Weapon no="1">
+        <!-- 合成：冲锋枪+重锤 -->
+        <!-- 特效：造成的伤害增加30% -->
+        <type>high</type>
+        <name>激光大炮</name>
+        <effect>无</effect>
+        <attribute>
+            <attack>160</attack>
+            <attackSpeed>0</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>middle</type>
+                <no>3</no>
+            </item>
+            <item>
+                <type>middle</type>
+                <no>4</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="2">
+        <!-- 合成：冲锋枪+2*攻速之戒 -->
+        <!-- 特效：每次攻击增加自身10攻速，最多叠加6层，持续2秒 -->
+        <type>high</type>
+        <name>加特林</name>
+        <effect>每次普通攻击击中目标增加自身10攻速, 最多叠加6层, 持续2秒</effect>
+        <attribute>
+            <attack>80</attack>
+            <attackSpeed>40</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>middle</type>
+                <no>3</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>2</no>
+            </item>
+            <item>
+                <type>low</type>
+                <no>2</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="3">
+        <!-- 合成：精灵之弓+堕落之剑 -->
+        <!-- 特效：造成的伤害无视50%防御力 -->
+        <type>high</type>
+        <name>水晶弓</name>
+        <effect>造成的伤害无视30%防御力</effect>
+        <attribute>
+            <attack>80</attack>
+            <attackSpeed>40</attackSpeed>
+            <moveSpeed>0</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>middle</type>
+                <no>1</no>
+            </item>
+            <item>
+                <type>middle</type>
+                <no>2</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="4">
+        <!-- 合成：回力标+堕落之剑 -->
+        <!-- 特效：每次普通攻击使目标减速30，防御降低20，持续1秒 -->
+        <type>high</type>
+        <name>宝扇</name>
+        <effect>每次普通攻击使目标减速30, 防御降低20, 持续1秒</effect>
+        <attribute>
+            <attack>40</attack>
+            <attackSpeed>50</attackSpeed>
+            <moveSpeed>30</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>middle</type>
+                <no>2</no>
+            </item>
+            <item>
+                <type>middle</type>
+                <no>5</no>
+            </item>
+        </combine>
+    </Weapon>
+    <Weapon no="5">
+        <!-- 合成：回力标+回力标 -->
+        <!-- 特效：在受到或造成伤害时，攻击+基础50%，防御50，攻速50，移速50，持续1秒 -->
+        <type>high</type>
+        <name>彩虹马</name>
+        <effect>在受到或造成伤害时, 增加防御10, 攻速10, 移速10, 持续1秒</effect>
+        <attribute>
+            <attack>0</attack>
+            <attackSpeed>100</attackSpeed>
+            <moveSpeed>100</moveSpeed>
+        </attribute>
+        <combine>
+            <item>
+                <type>middle</type>
+                <no>5</no>
+            </item>
+            <item>
+                <type>middle</type>
+                <no>5</no>
+            </item>
+        </combine>
+    </Weapon>
+</Weapon>
+
+
+
