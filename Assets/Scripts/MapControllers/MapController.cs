@@ -54,6 +54,7 @@ public class MapController
     public int darkY;
     public Vector2 leftTopLight;
     public Vector2 leftTopDark;
+    public List<GameObject> mapObjects;
 
     // Start is called before the first frame update
     public MapController()
@@ -78,6 +79,7 @@ public class MapController
         mapGrid = GameObject.Find("MapGrid");
         // Initial map
         maps = new List<List<Transform>>();
+        mapObjects = new List<GameObject>();
     }
 
     /************************* Initialize *************************/
@@ -155,6 +157,7 @@ public class MapController
                 // Set Poison Invisible
                 tmpMap.transform.Find("PoisonRegionMask").gameObject.SetActive(false);
                 mapList.Add(tmpMap);
+                mapObjects.Add(tmpMap.gameObject);
             }
             maps.Add(mapList);
         }
@@ -165,12 +168,16 @@ public class MapController
         GameObject mapBorderPrefab = (GameObject)Resources.Load(mapPrefabPath + mapBorderPrefabPath);
         GameObject mapBorderTop = Object.Instantiate(mapBorderPrefab, new Vector3(0, TOP_BORDER + 1, 0), Quaternion.identity);
         mapBorderTop.transform.localScale = new Vector3(ONE_MAP_WIDTH * MAP_WIDTH_NUMBER + 10, 1, 1);
+        mapObjects.Add(mapBorderTop);
         GameObject mapBorderBottom = Object.Instantiate(mapBorderPrefab, new Vector3(0, BOTTOM_BORDER, 0), Quaternion.identity);
         mapBorderBottom.transform.localScale = new Vector3(ONE_MAP_WIDTH * MAP_WIDTH_NUMBER + 10, 1, 1);
+        mapObjects.Add(mapBorderBottom);
         GameObject mapBorderLeft = Object.Instantiate(mapBorderPrefab, new Vector3(LEFT_BORDER, 0, 0), Quaternion.identity);
         mapBorderLeft.transform.localScale = new Vector3(1, ONE_MAP_HEIGHT * MAP_HEIGHT_NUMBER + 10, 1);
+        mapObjects.Add(mapBorderLeft);
         GameObject mapBorderRight = Object.Instantiate(mapBorderPrefab, new Vector3(RIGHT_BORDER + 1, 0, 0), Quaternion.identity);
         mapBorderRight.transform.localScale = new Vector3(1, ONE_MAP_HEIGHT * MAP_HEIGHT_NUMBER + 10, 1);
+        mapObjects.Add(mapBorderRight);
     }
 
     private void InitializeFistBase()
@@ -194,13 +201,6 @@ public class MapController
             }
         }
     }
-
-
-
-
-
-
-
 
     public bool InBossMap(Vector2 position)
     {
@@ -242,6 +242,17 @@ public class MapController
             return true;
         }
         return false;
+    }
+
+    public void DestroyAll()
+    {
+        for(int i=0; i< mapObjects.Count; i++)
+        {
+            if (mapObjects[i] != null)
+            {
+                Object.Destroy(mapObjects[i]);
+            }
+        }
     }
 
 }

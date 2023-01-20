@@ -172,4 +172,21 @@ public class FistManager
         }
     }
 
+    public void DetroyAll()
+    {
+        // destroy all items and neutral 
+        foreach(var f in fistItemList)
+        {
+            Destroy(f.fist);
+        }
+        ClearDestroyedObject();
+
+        // destroy all champions
+        for(int i=0; i<championObjectList.Count; i++)
+        {
+            Object.Destroy(championObjectList[i].gameObject);
+        }
+
+    }
+
 }

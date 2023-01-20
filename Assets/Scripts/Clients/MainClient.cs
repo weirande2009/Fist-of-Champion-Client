@@ -71,9 +71,7 @@ public class MainClient : Client
 
     /* Variables */
     /* Player */
-    public string playerRoomNo;                           // Present Player Room No.
-
-
+    public string playerRoomNo;                     // Present Player Room No.
 
     /* Functions */
     /* private */

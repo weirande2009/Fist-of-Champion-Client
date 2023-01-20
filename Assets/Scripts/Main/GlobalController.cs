@@ -1,6 +1,3 @@
-#define GAME_DEBUG
-//#define OFFLINE
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,8 +11,9 @@ public class GlobalController : MonoBehaviour
     // Client
     private string mainServerIP;
     private int mainServerPort;
-    private string gameServerIP;
+    public string gameServerIP;
     public int gameServerPort;
+    public NewMainClient newMainClient;
     public MainClient mainClient;
     public GameClient gameClient;
 
@@ -32,27 +30,47 @@ public class GlobalController : MonoBehaviour
     public GameController gameController;
     public object gameOverLock;
     public bool gameOver;
-
+    public enum GameType
+    {
+        Online = 1,
+        Offline = 2,
+    }
+    private GameType gameType;
 
     // Start is called before the first frame update
     void Start()
     {
-#if OFFLINE
-        InitializeForOffline(); 
-#elif GAME_DEBUG
-        InitializeForGameDebug();
-#else
-        Initialize();
-#endif
-    }
-
-    private void Initialize()
-    {
         /* Instance */
         Instance = this;
+        /* Set Controller Info */
+        gameStartLock = new object();
+        gameStart = false;
+        gameOverLock = new object();
+        gameOver = false;
+        /* Set Client */
+        newMainClient = null;
+        gameClient = null;
+        offlineServer = null;
+        gameController = null;
+    }
 
+    public void StartMyGame(GameType type)
+    {
+        gameType = type;
+        if (gameType == GameType.Online)
+        {
+            InitializeForOnline();
+        }
+        else if(gameType == GameType.Offline)
+        {
+            InitializeForOffline();
+        }
+    }
+
+    private void InitializeForOnline()
+    {
         /* Set Properties */
-        DontDestroyOnLoad(this);  // Client Object exist when changing scene
+        // DontDestroyOnLoad(this);  // Client Object exist when changing scene
         Application.targetFrameRate = 60;
 
         /* Set Controller Info */
@@ -62,67 +80,20 @@ public class GlobalController : MonoBehaviour
         gameOver = false;
 
         /* Client */
-        mainServerIP = "114.116.101.46";
+        mainServerIP = "108.61.142.36";
         mainServerPort = 12345;
-        gameServerIP = "114.116.101.46";
-
-        mainClient = new MainClient(mainServerIP, mainServerPort);
-        mainClient.Start();
-    }
-
-    private void InitializeForGameDebug()
-    {
-        /* Instance */
-        Instance = this;
-
-        /* Set Properties */
-        DontDestroyOnLoad(this);  // Client Object exist when changing scene
-        Application.targetFrameRate = 60;
-
-        /* Set Controller Info */
-        gameStartLock = new object();
-        gameStart = false;
-        gameOverLock = new object();
-        gameOver = false;
-
-        /* Client */
-        mainServerIP = "114.116.101.46";
-        mainServerPort = 12345;
-        gameServerIP = "3.145.137.146";
-        gameServerPort = 12345;
-        //mainClient = new MainClient(mainServerIP, mainServerPort);
-        //mainClient.Start();
-        gameClient = new GameClient(gameServerIP, gameServerPort);
-        GameSceneController.Instance.gameInfoController.AddInfo("开始连接服务器...");
-        gameClient.Start();
-        GameSceneController.Instance.gameInfoController.AddInfo("开始初始化游戏控制器...");
-        gameController = new GameController();
-        GameSceneController.Instance.gameInfoController.AddInfo("开始向服务器发送连接请求...");
-        championNo = 0;
-        playerSeatNo = 0;
-        playerName = "weiran";
-        // gameClient.SendConnect(playerName, championNo, playerSeatNo);
+        newMainClient = new NewMainClient(mainServerIP, mainServerPort);
+        newMainClient.Start();
     }
 
     private void InitializeForOffline()
     {
-        /* Instance */
-        Instance = this;
-
         /* Set Properties */
-        DontDestroyOnLoad(this);  // Client Object exist when changing scene
+        // DontDestroyOnLoad(this);  // Client Object exist when changing scene
         Application.targetFrameRate = 60;
 
-        /* Set Controller Info */
-        gameStartLock = new object();
-        gameStart = false;
-        gameOverLock = new object();
-        gameOver = false;
-
         /* Fake Client */
-        gameServerIP = "114.116.101.46";
-        gameServerPort = 12346;
-        gameClient = new GameClient(gameServerIP, gameServerPort, true);
+        gameClient = new GameClient("127.0.0.1", 12345, true);
         championNo = 0;
         playerSeatNo = 0;
         gameController = new GameController();
@@ -133,17 +104,16 @@ public class GlobalController : MonoBehaviour
 
     private void Update()
     {
-#if GAME_DEBUG
-        UpdateForGameDebug();
-#else
         UpdateForGame();
-#endif
     }
 
     void UpdateForGame()
     {
         // Watch MainClient
-        mainClient.WatchExit();
+        if(newMainClient != null)
+        {
+            newMainClient.WatchExit();
+        }
         // Watch Start Game
         lock (gameStartLock)
         {
@@ -151,13 +121,13 @@ public class GlobalController : MonoBehaviour
             {
                 gameStart = false;
                 // Load Scene
-                SceneManager.LoadScene("Game");
+                // SceneManager.LoadScene("Game");
                 // Start Game
                 StartGame();
             }
         }
         // Watch GameClient
-        if(gameClient != null)
+        if (gameClient != null)
         {
             gameClient.WatchExit();
         }
@@ -183,7 +153,6 @@ public class GlobalController : MonoBehaviour
         }
     }
 
-
     void UpdateForGameDebug()
     {
         // Watch GameClient
@@ -207,41 +176,42 @@ public class GlobalController : MonoBehaviour
     /// </summary>
     public void StartGame()
     {
-        // New a game controller
-        GameSceneController.Instance.gameInfoController.AddInfo("开始初始化游戏控制器...");
-        gameController = new GameController();
         // New a game client
         gameClient = new GameClient(gameServerIP, gameServerPort);
         GameSceneController.Instance.gameInfoController.AddInfo("开始连接服务器...");
         gameClient.Start();
+        // New a game controller
+        GameSceneController.Instance.gameInfoController.AddInfo("开始初始化游戏控制器...");
+        gameController = new GameController();
         // Connect
         GameSceneController.Instance.gameInfoController.AddInfo("开始向服务器发送连接请求...");
-        gameClient.SendConnect(userName, championNo, playerSeatNo);
+        gameClient.SendConnect(playerName, championNo, playerSeatNo);
     }
 
     public void EndGame()
     {
-        // Delete game controller
-        gameController = null;
         // Delete game client
-#if OFFLINE
-
-#else
-        gameClient.Disconnect();
-#endif
-        gameClient = null;
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        if(gameType == GameType.Online)
+        {
+            newMainClient.Disconnect();
+            gameClient.Disconnect();
+        }
+        Start();
+        GameSceneController.Instance.ResetScene();
     }
 
     public void ConnectGame()
     {
-        gameClient.SendConnect(playerName, championNo, playerSeatNo);
+        if(gameType == GameType.Online)
+        {
+            newMainClient.SendParticipate();
+        }
+        else if(gameType == GameType.Offline)
+        {
+            gameClient.SendConnect(playerName, championNo, playerSeatNo);
+        }
     }
+
 
 
 }

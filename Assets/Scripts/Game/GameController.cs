@@ -30,7 +30,6 @@ public class GameController
     public int randomSeed;                          // Random seed
     public GameObject camera;                       // Main camera
     public GameObject cameraBorder;
-    private GameObject waitingImage;
 
     // Players
     private List<PlayerInfo> playersInfo;           // Players infomation
@@ -132,8 +131,6 @@ public class GameController
         gameFpsTimer = 0;
         gameFpsTimerTick = 1;
         fpsCounter = 0;
-        // Waiting Image
-        waitingImage = GameObject.Find("WaitingImage");
         /* Logic Frame */
         syncFrameId = -1;
         logicFrameUpdate = false;
@@ -195,7 +192,7 @@ public class GameController
             if (starting)
             {
                 GameSceneController.Instance.gameInfoController.AddInfo("¿ªÊ¼ÓÎÏ·...");
-                waitingImage.SetActive(false);
+                GameSceneController.Instance.SetWaitingImage(false);
                 operating = true;
                 starting = false;
                 inGame = true;
@@ -523,6 +520,16 @@ public class GameController
         SetCameraFollow(mainPlayerNo);
     }
 
+    /*********************************** Destructor ***********************************/
+    private void DestroyAll()
+    {
+        // destroy fist
+        fistManager.DetroyAll();
+        // Destroy maps
+        mapController.DestroyAll();
+    }
+
+
     /*********************************** Get Info ***********************************/
 
     public ChampionObject GetMainChampion()
@@ -541,6 +548,10 @@ public class GameController
         lock (endGameLock)
         {
             endGame = true;
+        }
+        if (endGame)
+        {
+            DestroyAll();
         }
     }
 

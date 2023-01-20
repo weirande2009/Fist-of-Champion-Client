@@ -80,6 +80,8 @@ public class GameSceneController : MonoBehaviour
     // Game Over Canvas
     public GameObject gameOverCanvas;                   // game over canvas
     public Text championNameText;                       // champion name text
+    // Initialize Canvas
+    public GameObject initializeCanvas;                 // Initialize Canvas
     // Enter Info Canvas
     public GameObject enterInfoCanvas;                  // Enter Info Canvas
     public GameObject chooseCharacterCanvas;            // Choose Character Canvas
@@ -87,6 +89,10 @@ public class GameSceneController : MonoBehaviour
     private List<Sprite> characterSpriteList;           // Character Sprites
     public Image chosenCharacterImage;                  // Chosen Character Image
     public Text playerNameText;                         // Player Name Text
+    // Waiting image
+    public GameObject waitingImage;                     // Waiting Image
+    // Choose Mode Canvas
+    public GameObject chooseModeCanvas;                 // Choose Mode Canvas
     // Damaged Effect
     public GameObject damagedEffectImage;               // Damaged Effect Image
     private bool inDamagedEffect;                       // Whether in Damaged Effect
@@ -159,12 +165,20 @@ public class GameSceneController : MonoBehaviour
         inDamagedEffect = false;
         damagedEffectTime = 0.25f;
         damagedEffectTimer = 0;
+        // Set EnterInfoCanvas
+        enterInfoCanvas.SetActive(false);
+        // Set Initialize Canvas
+        initializeCanvas.SetActive(true);
+        // Set Choose Mode Canvas
+        chooseModeCanvas.SetActive(true);
+        // Set Waiting Image
+        waitingImage.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GlobalController.Instance.gameController != null && GlobalController.Instance.gameController.operating)
+        if (GlobalController.Instance.gameController != null && GlobalController.Instance.gameController.operating)
         {
             // Update Attribute
             if (GlobalController.Instance.gameController.GetMainChampion().lifeNeedUpdate)
@@ -409,8 +423,6 @@ public class GameSceneController : MonoBehaviour
         combineRoutes[weaponType].SetActive(true);
     }
 
-
-
     public void ClickItemInBag()
     {
         // Get click button
@@ -616,7 +628,8 @@ public class GameSceneController : MonoBehaviour
 
     public void ClickExitGame()
     {
-        GlobalController.Instance.gameClient.SendExit();
+        //GlobalController.Instance.gameClient.SendExit();
+        GlobalController.Instance.gameController.Exit();
     }
 
     public void ClickResumeGame()
@@ -665,7 +678,9 @@ public class GameSceneController : MonoBehaviour
 
     public void ClickConnectGame()
     {
-        enterInfoCanvas.SetActive(false);
+        initializeCanvas.SetActive(false);
+        // Set Waiting Image
+        SetWaitingImage(true);
         GlobalController.Instance.championNo = chosenCharacter;
         GlobalController.Instance.playerName = playerNameText.text;
         GlobalController.Instance.ConnectGame();
@@ -676,6 +691,30 @@ public class GameSceneController : MonoBehaviour
         damagedEffectImage.SetActive(true);
         inDamagedEffect = true;
         damagedEffectTimer = 0;
+    }
+
+    public void ClickOnlineGame()
+    {
+        GlobalController.Instance.StartMyGame(GlobalController.GameType.Online);
+        enterInfoCanvas.SetActive(true);
+        chooseModeCanvas.SetActive(false);
+    }
+
+    public void ClickOfflineGame()
+    {
+        GlobalController.Instance.StartMyGame(GlobalController.GameType.Offline);
+        enterInfoCanvas.SetActive(true);
+        chooseModeCanvas.SetActive(false);
+    }
+
+    public void ResetScene()
+    {
+        Start();
+    }
+
+    public void SetWaitingImage(bool b)
+    {
+        waitingImage.SetActive(b);
     }
 
 }

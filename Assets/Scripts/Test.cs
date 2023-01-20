@@ -15,7 +15,6 @@ public class Test : MonoBehaviour
     {
         square.transform.position = Vector3.zero;
         square.transform.localScale = new Vector3(100, 1, 1);
-
     }
 
     // Update is called once per frame

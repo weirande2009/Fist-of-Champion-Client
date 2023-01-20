@@ -8,9 +8,6 @@ public class NeutralController
     private static int LOW_NEUTRAL_NUM_IN_A_MAP = 10;
     private static int MIDDLE_NEUTRAL_NUM_IN_A_MAP = 4;
 
-    
-
-
     // Variables for Utility Functions
     private List<GamePlayer> gamePlayers;
     private MapController mapController;
@@ -18,9 +15,6 @@ public class NeutralController
     // Prefab
     private Dictionary<MapController.MapType, Dictionary<NeutralObject.NeutralType, string>> neutralPrefabNames;
     private Dictionary<MapController.MapType, Dictionary<NeutralObject.NeutralType, Transform>> neutralPrefab;
-
-    
-
 
     public NeutralController(List<GamePlayer> _gamePlayers, MapController _mapController)
     {
@@ -125,7 +119,6 @@ public class NeutralController
 
     private void InitializeNeutralObject()
     {
-        //InitializeTest();
         // Initialize Neutral for Normal Map
         InitializeNeutralForNormalMap();
         // Initialize Neutral for Boss Map
@@ -174,6 +167,13 @@ public class NeutralController
     {
         GenerateNeutralObject(MapController.MapType.Soil, NeutralObject.NeutralType.Low, new Vector2(0, 0));
     }
+
+    /************************* Destroy Neutral Object *************************/
+    private void DestroyNeutralObject()
+    {
+
+    }
+
 
     /************************* Generate Neutral Object *************************/
 

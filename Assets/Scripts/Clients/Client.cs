@@ -324,13 +324,6 @@ public class UDPClient
             if (ClientState == Client.CLIENT_CLOSE)
             {
                 Debug.Log("断开连接");
-                Debug.Log("关闭程序");
-                Application.Quit();
-#if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-#else
-                Application.Quit();
-#endif
             }
         }
     }
