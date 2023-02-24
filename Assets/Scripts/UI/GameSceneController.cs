@@ -212,31 +212,31 @@ public class GameSceneController : MonoBehaviour
 
     public void SetAttackText(float _attack)
     {
-        attackText.text = "¹¥»÷Á¦£º" + Mathf.Round(_attack);
+        attackText.text = "Attack£º" + Mathf.Round(_attack);
         attack = _attack;
     }
 
     public void SetDefenseText(float _defense)
     {
-        defenseText.text = "·ÀÓùÁ¦£º" + Mathf.RoundToInt(_defense * 100) / 100.0f;
+        defenseText.text = "Defense£º" + Mathf.RoundToInt(_defense * 100) / 100.0f;
         defense = _defense;
     }
 
     public void SetAttackSpeedText(float _attackSpeed)
     {
-        attackSpeedText.text = "¹¥»÷ËÙ¶È£º" + Mathf.RoundToInt(_attackSpeed * 100) / 100.0f;
+        attackSpeedText.text = "Att Speed£º" + Mathf.RoundToInt(_attackSpeed * 100) / 100.0f;
         attackSpeed = _attackSpeed;
     }
 
     public void SetAttackRangeText(float _attackRange)
     {
-        attackRangeText.text = "¹¥»÷·¶Î§£º" + Mathf.RoundToInt(_attackRange * 100) / 100.0f;
+        attackRangeText.text = "Att Range£º" + Mathf.RoundToInt(_attackRange * 100) / 100.0f;
         attackRange = _attackRange;
     }
 
     public void SetMoveSpeedText(float _moveSpeed)
     {
-        moveSpeedText.text = "ÒÆ¶¯ËÙ¶È£º" + Mathf.RoundToInt(_moveSpeed * 100) / 100.0f;
+        moveSpeedText.text = "Mov Speed£º" + Mathf.RoundToInt(_moveSpeed * 100) / 100.0f;
         moveSpeed = _moveSpeed;
     }
 
@@ -613,7 +613,7 @@ public class GameSceneController : MonoBehaviour
 
     public void SetRankText(int rank)
     {
-        rankText.text = "µÚ " + rank.ToString() + "Ãû";
+        rankText.text = "No. " + rank.ToString();
     }
 
     public void ActivateGameOverCanvas()
@@ -734,10 +734,10 @@ public class GameInfoController
 
     public void AddInfo(string info)
     {
-        gameInfoText.text += info + "\n";
+        /*gameInfoText.text += info + "\n";
         Vector2 textSize = gameInfoRectTransform.rect.size;
         gameInfoRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, textSize.x);
-        gameInfoRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, gameInfoText.preferredHeight);
+        gameInfoRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, gameInfoText.preferredHeight);*/
     }
 }
 

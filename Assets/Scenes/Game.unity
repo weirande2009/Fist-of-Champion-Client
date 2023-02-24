@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u673A\u5668\u4EBA"
+  m_Text: Robot
 --- !u!222 &1527097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2255,7 +2255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u653B\u51FB\u901F\u5EA6\uFF1A1"
+  m_Text: "Att Speed\uFF1A1"
 --- !u!222 &196699679
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3031,8 +3031,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 505.9795, y: -198.87671}
-  m_SizeDelta: {x: 182.8725, y: 81.8535}
+  m_AnchoredPosition: {x: 470.427, y: -201.64}
+  m_SizeDelta: {x: 253.9774, y: 87.384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310940789
 MonoBehaviour:
@@ -4609,7 +4609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u786E\u8BA4"
+  m_Text: Confirm
 --- !u!222 &446179685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5989,7 +5989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u653B\u51FB\u8DDD\u79BB\uFF1A10"
+  m_Text: "Att Range\uFF1A10"
 --- !u!222 &571883127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6143,7 +6143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9632\u5FA1\u529B\uFF1A50"
+  m_Text: "Defense\uFF1A50"
 --- !u!222 &598792911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7882,7 +7882,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8BF7\u8F93\u5165..."
+  m_Text: Please Enter...
 --- !u!222 &726374426
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8283,7 +8283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B7B\u7075\u6CD5\u5E08"
+  m_Text: Wizard
 --- !u!222 &761110145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8671,7 +8671,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 27e07bc6c9541f24594bfc54327aac6c, type: 3}
-    m_FontSize: 20
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -8682,7 +8682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u751F\u547D\u503C"
+  m_Text: Life
 --- !u!222 &796583020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11351,7 +11351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6E38\u4FA0"
+  m_Text: Ranger
 --- !u!222 &1098004544
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11635,7 +11635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7EE7\u7EED\u89C2\u6218"
+  m_Text: Continue
 --- !u!222 &1117649665
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12278,8 +12278,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201, y: 0.000019789}
-  m_SizeDelta: {x: 94.9512, y: 54.933}
+  m_AnchoredPosition: {x: -212.4276, y: -3.1015}
+  m_SizeDelta: {x: 117.8063, y: 61.136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212640731
 MonoBehaviour:
@@ -12314,7 +12314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u79F0\u547C"
+  m_Text: Name
 --- !u!222 &1212640732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13518,7 +13518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F00\u59CB\u6E38\u620F"
+  m_Text: Start
 --- !u!222 &1325008230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13815,7 +13815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7267\u5E08"
+  m_Text: Minister
 --- !u!222 &1362095880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14233,7 +14233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u79FB\u901F\uFF1A50"
+  m_Text: "Mov Speed\uFF1A50"
 --- !u!222 &1386344975
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15570,7 +15570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u72C2\u6218\u58EB"
+  m_Text: Berserker
 --- !u!222 &1541552148
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16562,7 +16562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u653B\u51FB\u529B\uFF1A50"
+  m_Text: "Attack\uFF1A50"
 --- !u!222 &1639001025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17150,7 +17150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u523A\u5BA2"
+  m_Text: Assassin
 --- !u!222 &1682673682
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17383,7 +17383,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6CD5\u5E08"
+  m_Text: Sorcerer
 --- !u!222 &1700464093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18091,7 +18091,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9A91\u58EB"
+  m_Text: Knight
 --- !u!222 &1791689901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19238,7 +19238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7B2C\u4E00\u540D"
+  m_Text: Champion
 --- !u!222 &1937741472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20241,7 +20241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9009\u62E9\u89D2\u8272"
+  m_Text: Choose
 --- !u!222 &1992320915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20524,7 +20524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u79BB\u5F00"
+  m_Text: Exit
 --- !u!222 &2008014419
 CanvasRenderer:
   m_ObjectHideFlags: 0

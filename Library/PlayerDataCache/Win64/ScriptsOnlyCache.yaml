@@ -56,8 +56,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -144,89 +142,89 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2830}
     - Class: 114
-      Script: {instanceID: 2900}
+      Script: {instanceID: 2902}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3102}
-    - Class: 114
-      Script: {instanceID: 3106}
+      Script: {instanceID: 3104}
     - Class: 114
       Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 3250}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3274}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3382}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 3494}
+      Script: {instanceID: 3384}
     - Class: 114
       Script: {instanceID: 3496}
     - Class: 114
-      Script: {instanceID: 3544}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3546}
     - Class: 114
-      Script: {instanceID: 3570}
+      Script: {instanceID: 3560}
     - Class: 114
-      Script: {instanceID: 3688}
+      Script: {instanceID: 3572}
     - Class: 114
-      Script: {instanceID: 3712}
+      Script: {instanceID: 3690}
     - Class: 114
-      Script: {instanceID: 3920}
+      Script: {instanceID: 3714}
     - Class: 114
-      Script: {instanceID: 3936}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 4098}
+      Script: {instanceID: 3938}
     - Class: 114
-      Script: {instanceID: 4128}
+      Script: {instanceID: 4102}
     - Class: 114
-      Script: {instanceID: 4280}
+      Script: {instanceID: 4132}
     - Class: 114
-      Script: {instanceID: 4438}
+      Script: {instanceID: 4284}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 4442}
     - Class: 114
-      Script: {instanceID: 4770}
+      Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 4828}
+      Script: {instanceID: 4774}
     - Class: 114
-      Script: {instanceID: 4926}
+      Script: {instanceID: 4832}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 4930}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 5052}
     - Class: 114
-      Script: {instanceID: 5440}
+      Script: {instanceID: 5368}
     - Class: 114
-      Script: {instanceID: 5600}
+      Script: {instanceID: 5444}
     - Class: 114
-      Script: {instanceID: 5628}
+      Script: {instanceID: 5604}
     - Class: 114
-      Script: {instanceID: 5976}
+      Script: {instanceID: 5632}
     - Class: 114
-      Script: {instanceID: 6048}
+      Script: {instanceID: 5982}
     - Class: 114
-      Script: {instanceID: 6092}
+      Script: {instanceID: 6054}
     - Class: 114
-      Script: {instanceID: 6132}
+      Script: {instanceID: 6098}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 6138}
     - Class: 114
-      Script: {instanceID: 6308}
+      Script: {instanceID: 6188}
+    - Class: 114
+      Script: {instanceID: 6314}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
